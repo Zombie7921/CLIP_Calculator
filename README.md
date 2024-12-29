@@ -31,6 +31,9 @@ This repository contains a Python-based project to calculate **CLIP scores** for
   - Saves scores in both `.csv` and `.json` formats for reporting and integration.
 
 ---
+## CUDA Toolkit Requirements
+Considering this project is written on CUDA Toolkit 11.8, make sure you have installed it before use. If you haven’t installed it yet, click here to download and install the toolkit.
+
 
 ## Requirements
 
