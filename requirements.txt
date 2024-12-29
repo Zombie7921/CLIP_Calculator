@@ -1,0 +1,11 @@
+torch==2.0.0+cu118
+torchvision==0.15.1+cu118
+torchaudio==2.0.0+cu118
+git+https://github.com/openai/CLIP.git
+pillow~=9.5.0
+tqdm
+matplotlib~=3.10.0
+seaborn>=0.11.2
+numpy~=1.24.4
+GPUtil~=1.4.0
+requests~=2.32.3
