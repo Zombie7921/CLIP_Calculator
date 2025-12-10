@@ -1,5 +1,7 @@
 # CLIP_Calculator
 
+[中文版](README_CN.md)
+
 This repository contains a Python-based project to calculate **CLIP scores** for images using OpenAI's CLIP model, with enhanced visualization and customization options.
 
 ---
@@ -31,9 +33,10 @@ This repository contains a Python-based project to calculate **CLIP scores** for
   - Saves scores in both `.csv` and `.json` formats for reporting and integration.
 
 ---
-## CUDA Toolkit Requirements
-Considering this project is written on CUDA Toolkit 11.8, make sure you have installed it before use. If you haven’t installed it yet, click here to download and install the toolkit.
 
+## CUDA Toolkit Requirements
+
+Considering this project is written on CUDA Toolkit 11.8, make sure you have installed it before use. If you haven’t installed it yet, click here to download and install the toolkit.
 
 ## Requirements
 
@@ -82,11 +85,11 @@ pip install -r requirements.txt
 
 ### Command-Line Options
 
-| Argument         | Description                                                                 | Default Value                     |
-|-------------------|-----------------------------------------------------------------------------|-----------------------------------|
-| `--model`         | Specify the CLIP model to use (`ViT-B/32`, `RN50`, etc.).                   | Automatically selected by VRAM    |
-| `--prompt_dir`    | Specify the directory containing `.txt` prompt files.                      | `prompts/`                        |
-| `--batch_output`  | Customize batch output folder name.                                         | Auto-generated (`Batch_X`)        |
+| Argument | Description | Default Value |
+|---|---|---|
+| `--model` | Specify the CLIP model to use (`ViT-B/32`, `RN50`, etc.). | Automatically selected by VRAM |
+| `--prompt_dir` | Specify the directory containing `.txt` prompt files. | `prompts/` |
+| `--batch_output` | Customize batch output folder name. | Auto-generated (`Batch_X`) |
 
 ### Example Usage
 
@@ -95,7 +98,7 @@ pip install -r requirements.txt
 3. Run the script:
 
 ```bash
-python calculate_clip_score.py
+python main.py
 ```
 
 ### Advanced Usage
@@ -103,8 +106,12 @@ python calculate_clip_score.py
 Specify a custom model, prompt, and batch output folder:
 
 ```bash
-python calculate_clip_score.py --model ViT-B/16 --prompt_dir prompts/ --batch_output Custom_Batch
+python main.py --model ViT-B/16 --prompt_dir prompts/ --batch_output Custom_Batch
 ```
+
+### Windows Shortcut
+
+Simply double-click `run.bat` to run the active process.
 
 ---
 
@@ -134,22 +141,10 @@ CLIP_Calculator/
 
 ---
 
-## Example Results
-
-### Input
-- **Target Images**: 5 images in the `target_images/` folder.
-- **Prompt**: `"A scenic view of a mountain lake."`
-
-### Output
-- `Batch_X/scored_images`: Images renamed based on their scores.
-- `Batch_X/charts`: A summary chart of all images in the batch.
-- `Batch_X/results`: `results.csv` and `results.json` containing the score data.
-
----
-
 ## Supported Models
 
 This project supports the following OpenAI CLIP models:
+
 - `ViT-B/32`
 - `ViT-B/16`
 - `ViT-L/14`
@@ -167,7 +162,6 @@ For more model details, visit [OpenAI's CLIP repository](https://github.com/open
 ## Contribution
 
 We welcome contributions! Please open an issue or submit a pull request for enhancements or bug fixes.
-
 If you find any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
 
 If you find this project useful, or it has inspired you, please cite the original paper "CLIP Score" on arXiv or the original CLIP Score project on GitHub to contribute to their work.

@@ -6,10 +6,9 @@ import clip
 import torch
 from PIL import Image
 
-from chart_selection import select_chart_type, select_color
-from dynamic_model_loader import load_model, select_model_based_on_vram
-from prompt_selection import get_prompt_from_folder
-from visualization_options import visualize
+from viz import select_chart_type, select_color, visualize, prompt_advanced_settings
+from models import load_model, select_model_based_on_vram
+from prompts import get_prompt_from_folder
 
 
 # Function to create output directory
@@ -143,11 +142,7 @@ if __name__ == "__main__":
     single_chart_type = select_chart_type("single-image chart")
     single_chart_color = select_color("single-image chart")
 
-    advanced_settings = {
-        "figsize": (12, 6),
-        "xlabel": "Images",
-        "ylabel": "CLIP Scores"
-    }
+    advanced_settings = prompt_advanced_settings()
 
     # Visualize results
     visualize(
